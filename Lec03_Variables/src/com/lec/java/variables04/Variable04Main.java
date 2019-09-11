@@ -26,7 +26,7 @@ public class Variable04Main {
 		System.out.println("num6: " + num6);
 		System.out.println("num7: " + num7);
 		
-		double num8 = 0.0001213;
+		double num8 = 0.0001213; 
 		double num9 = 1.213e-4;
 		System.out.println("num8: " + num8);
 		System.out.println("num9: " + num9);

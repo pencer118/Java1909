@@ -36,7 +36,7 @@ public class Variable01Main {
 						// 에러메세지 : cannot be resolved...
 		
 		// 변수는 대소문자 구분합니다!!!!!
-		int Num1 = 100;  // num1 과는 다르다!
+		int Num1 = 100;  // num1 과는 다르다! 
 		//int num1;  // 동일한 이름의 변수 선언 불가!
 		
 		// 변수명 작명

@@ -25,7 +25,7 @@ public class Variable03Main {
 		
 		System.out.println("int: " + Integer.MIN_VALUE + " ~ " + Integer.MAX_VALUE);
 		System.out.println("long: " + Long.MIN_VALUE + " ~ " + Long.MAX_VALUE);
-		//int num7 = 9876543210;
+		//int num7 = 9876543210; 
 		long num8 = 9876543210L;  // long 타입 리터럴 상수 만드려면 뒤에 L 붙이세요
 		
 		long num9 = 12;

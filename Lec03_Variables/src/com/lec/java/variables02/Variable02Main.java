@@ -4,7 +4,7 @@ public class Variable02Main {
 
 	public static void main(String[] args) {
 		System.out.println("변수 02");
-		int num1 = 10;
+		int num1 = 10; 
 		System.out.println("num1 = " + num1);
 		
 		// int 타입의 변수 korean 을 선언하고, 초기화
