@@ -27,9 +27,42 @@ public class Operator09Main {
 
 	public static void main(String[] args) {
 		System.out.println("산술연산의 결과 타입");
-		// TODO
+		int n1 = 10, n2 = 20;
+		int n3 = n1 + n2; // + 연산의 결과 int
+		System.out.println("n3 : " + n3);
+		
+		byte b1 = 10, b2 = 20;
+		//byte b3 = b1 + b2;  // 불가, 결과가 int 타입이라서.
+		byte b3 = (byte)(b1 + b2);
+		
+		long l1 = 10L;
+		//int n4 = n1 + l1;
+		
+		short s1 = 100;
+		//short s2 = s1 + b1;
+		
+		float f1 = 1.0f, f2 = 2.0f;
+		float f3 = f1 + f2;  // 결과 float
+		
+		double d1 = 1.0, d2 = 2.0;
+		//float f4 = f1 + d1;  // 결과 double
+		
+		// int 이하의 산술연산 결과는 무.조.건 int 이기 때문에 주의할 사항
+		long l2 = 27000000000L;     // 3000 * 3000 * 3000
+		System.out.println("l2 : " + l2);
+		
+		l2 = 3000 * 3000 * 3000;
+		System.out.println("l2 : " + l2);
 		
 		
 	} // end main()
 	
 } // end class
+
+
+
+
+
+
+
+

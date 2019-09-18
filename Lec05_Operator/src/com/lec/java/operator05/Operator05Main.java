@@ -16,7 +16,24 @@ public class Operator05Main {
 	public static void main(String[] args) {
 		System.out.println("연산자 5 - 관계(비교) 연산자   Equality and Relational Operators");
 		System.out.println("<, >, <=, >=, ==, !=");
-		// TODO
+		
+		System.out.println(10 < 20);
+		System.out.println(10 > 20);
+		System.out.println(20 > 20);
+		System.out.println(20 >= 20);  // true,   =>  (x)
+		
+		double d1 = 3.2;
+		double d2 = 3.2;
+		
+		System.out.println(d1 == d2);  // ==  와 = 헷갈리지 말기.!!!
+		
+		// 실수 연산 결과 비교 주의! .. 정밀도의 문제 발생
+		double d3 = 12.3 / 4.1 + 0.2;  // 3.2
+		
+		System.out.println(d1 == d3);
+		
+		System.out.println(d1 != d3);
+		
 		
 
 		
