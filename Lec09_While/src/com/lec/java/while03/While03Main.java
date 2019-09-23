@@ -5,6 +5,25 @@ public class While03Main {
 	public static void main(String[] args) {
 		System.out.println("while 연습");
 		
+		// 1 ~ 10 까지 수 중에서 홀수만 출력(while 사용)
+		System.out.println("1 ~ 10 홀수 출력");
+		int n = 1;
+		while(n <= 10) {
+			
+			if(n % 2 == 1) {
+				System.out.println(n);
+			}
+			
+			n++;
+		}
+		
+		n = 1;
+		while(n <= 10) {
+			System.out.println(n);
+			n += 2;
+		}
+		
+		
 
 	} // end main()
 

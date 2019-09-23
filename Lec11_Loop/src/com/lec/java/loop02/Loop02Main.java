@@ -10,11 +10,35 @@ public class Loop02Main {
 	public static void main(String[] args) {
 		System.out.println("continue;");
 		
+		int num = 1;
+		
+		while(num <= 10) {
+			if(num % 2 == 0) {
+				num++;
+				continue;   
+			}
+			
+			System.out.println(num);
+			num++;			
+		}
+		
+		
+		
 
 		
 	} // end main
 
 } // end class Loop02Main
+
+
+
+
+
+
+
+
+
+
 
 
 
