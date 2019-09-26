@@ -10,6 +10,20 @@ public class Array09Main {
 	public static void main(String[] args) {
 		System.out.println("Ragged Array(가변 배열)");
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	} // end main()
 
 } // end class Array09Main

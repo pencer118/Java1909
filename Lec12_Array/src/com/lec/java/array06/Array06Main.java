@@ -44,6 +44,30 @@ public class Array06Main {
 		System.out.println("arrB:" + arrB);
 		
 		
+		int [] arrC = new int[] {11, 22, 33};
+		int [] arrD = new int[] {77, 88, 99};
+		
+		System.out.println("arrC : " + Arrays.toString(arrC));
+		System.out.println("arrD : " + Arrays.toString(arrD));
+		
+		arrC = arrD;   // 과연 무슨일이???
+			// 원래 arrC가 reference 하던 {11, 22, 33} 은 
+			// reference 가 끊기면서 garbage collecting 된다. (heap 에서 소멸)
+		
+		System.out.println("arrC : " + Arrays.toString(arrC));
+		System.out.println("arrD : " + Arrays.toString(arrD));
+		
+		int[] arrE = {100, 200, 300};
+		arrD = arrE;   // 과연???  {77,88,99} 는 소멸되었을까?
+
+		System.out.println();
+		System.out.println("arrC : " + Arrays.toString(arrC));
+		System.out.println("arrD : " + Arrays.toString(arrD));
+		System.out.println("arrE : " + Arrays.toString(arrE));
+
+		
+		
+		
 		
 		
 

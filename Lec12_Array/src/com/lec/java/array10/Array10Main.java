@@ -10,9 +10,52 @@ public class Array10Main {
 	public static void main(String[] args) {
 		System.out.println("Enhanced for (향상된 for) 문");
 		
+		int [] arr = {11, 22, 33, 44, 55};
+		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+		
+		// enhanced-for 사용,  (타 언어에선 for-each 라고들 한다)
+		for(int e : arr ) {   
+			System.out.print(e + " ");
+		}
+		System.out.println();
+		
+		
+		System.out.println("2차원배열에서 enhanced-for");
+		
+		int [][] array = {
+				{1, 2},
+				{3, 4, 5, 6},
+				{7, 8, 9}
+		};
+		
+		for( int[] row : array) {
+			for( int e : row) {
+				System.out.print(e + " ");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+		
+		
 	} // end main()
 
 } // end class Array10Main
+
+
+
+
+
+
+
+
 
 
 
