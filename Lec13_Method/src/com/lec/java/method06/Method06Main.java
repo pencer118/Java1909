@@ -28,6 +28,38 @@ public class Method06Main {
 		
 	} // end main()
 	
+	// 1.
+	public static void sayHello() {  // signature --> sayHello()
+		System.out.println("sayHello() 호출");
+		System.out.println("안녕하세요~");
+	}
+	
+	// 리턴 타입 다르다고 오버로딩 인정되지 않는다
+//	public static int sayHello() {
+//		
+//	}
+	
+	
+	// 2.
+	public static void sayHello(String name) { // signature --> sayHello(String) 
+		System.out.println("sayhello(String) 호출");
+		System.out.println("Hi ~ ");
+		System.out.println("제 이름은 " + name + " 입니다");
+	}
+	
+	// 3-1
+	public static void sayHello(int age) {  // sayHello(int)
+		System.out.println("sayHello(int) 호출");
+		System.out.println("My age is " + age);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 } // end class Method06Main
 
 
