@@ -1,7 +1,9 @@
 package com.lec.java.method06;
 
+import java.util.Scanner;
+
 /* Method Overloading (메소드 중복 정의)
-	 같은 이름으로 메소드를 매개변수 리스트를 달리하여 중복 정의, 
+	 '같은 이름으로 메소드'를 매개변수 리스트를 달리하여 '중복' 정의, 
 	 즉, 이름이 같아도 메소드 signature 가 다르면 중복정의 가능.
 	
   Method Signature 란
@@ -24,6 +26,35 @@ public class Method06Main {
 
 	public static void main(String[] args) {
 		System.out.println("Method Overloading (메소드 중복 정의)");
+		
+		sayHello();
+		sayHello("가나다");
+		sayHello(20);
+		
+		//sayHello(3.14);  // sayHello(double)
+		//sayHello(1, 2, 3);  // sayHello(int, int, int)
+		
+		short s = 100;
+		sayHello(s);  // sayHello(short)
+		
+		byte b = 10;
+		sayHello(b);  // <-- 어떤 sayHello???
+		
+		// 메소드 오버로딩의 장점??
+		// 동작은 동일하나 매개변수의 타입이 다른 경우.
+		// 일일히 메소드의 이름을 따로 정의하고 숙지 안해도 된다.
+		System.out.println(10);
+		System.out.println(3.14);
+		System.out.println("hello");
+		
+		
+		// 타입별로 메소드 만들면 사용하기 불편 
+//		Scanner sc = new Scanner(System.in);
+//		sc.nextInt();
+//		sc.nextByte();
+//		sc.nextLong();
+		
+		
 		
 		
 	} // end main()
@@ -53,7 +84,26 @@ public class Method06Main {
 		System.out.println("My age is " + age);
 	}
 	
+	// 3-2
+	public static void sayHello(short age) {
+		System.out.println("sayHello(short) 호출");
+		System.out.println("My age is " + age);
+	}
 	
+	
+	// 4
+	public static void sayHello(String name, int age) {
+		System.out.println("sayHello(String, int) 호출");
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+	}
+	
+	// 5
+	public static void sayHello(int age, String name) {
+		System.out.println("sayHello(int, String) 호출");
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+	}
 	
 	
 	
