@@ -1,5 +1,7 @@
 package com.lec.java.method09;
 
+import java.util.Arrays;
+
 /*  Call By Value : 값에 의한 호출
  	Call By Reference : 참조에 의한 호출
  	
@@ -20,8 +22,39 @@ public class Method09Main {
 	public static void main(String[] args) {
 		System.out.println("Call By Value : 값에 의한 호출");
 		System.out.println("Call By Reference : 참조에 의한 호출");
+		
+		int n = 10;
+		incNum(n);
+		System.out.println("incNum(int) 호출후 n : " + n);
 
+		System.out.println();
+		
+		int [] arr = {10, 20, 30};
+		incNum(arr);
+		System.out.println("incNum(int[]) 호출후 arr : " + Arrays.toString(arr));
+		
 	} // end main()
+	
+	public static void incNum(int value) {
+		value++;  // 매개변수 값 1 증가
+		System.out.println("incNum(int) : " + value);
+	}
+	
+	public static void incNum(int [] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]++;
+		}
+		System.out.println("incNum(int[]) : " + Arrays.toString(arr));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 } // end class
