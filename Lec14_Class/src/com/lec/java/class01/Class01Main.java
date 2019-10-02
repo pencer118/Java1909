@@ -26,8 +26,63 @@ public class Class01Main {
 		System.out.println("클래스 생성 & 사용");
 		
 		
+		MyTV tv1 = new MyTV();
+		tv1.displayStatus();
+		
+		tv1.powerOnOff(); 
+		tv1.volumeUp();
+		tv1.volumeUp();
+		tv1.channelUp();
+		tv1.channelUp();
+		tv1.channelUp();
+		tv1.channelUp();
+		
+		tv1.displayStatus();
+		
+		System.out.println();
+		
+		MyTV tv2 = new MyTV();
+		tv2.powerOnOff();
+		tv2.channelUp();
+		tv2.volumeUp();
+		tv2.volumeUp();
+		tv2.displayStatus();
+		
+		System.out.println();
+		
+		System.out.println(tv1);
+		System.out.println(tv2);
+		
+		if(tv1 == tv2) {
+			System.out.println("같은 참조");
+		} else {
+			System.out.println("다른 참조");
+		}
+		
+		
+		// private 수식어가 붙은 변수/메소드는
+		// 다른 클래스에서 사용 불가!
+		System.out.println();
+//		tv1.channel = 100;
+//		tv1.volume = 34;
+		tv1.displayStatus();
 
+		System.out.println();
+		// static 은 오로지 static 만 사용 가능!
+		//sayHello();   // static main() 에서
+						// non-static sayHello() 사용 불가
+		
+		// 그.러.나! 인스턴스 만들어서 사용 가능!
+		Class01Main c1 = new Class01Main();
+		c1.sayHello();
+		
 	} // end main()
+	
+	// non-static 메소드
+	public void sayHello() {
+		System.out.println("Hello");
+	}
+	
 	
 } // end class Class01Main
 

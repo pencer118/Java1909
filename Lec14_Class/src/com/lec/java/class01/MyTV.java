@@ -18,17 +18,69 @@ package com.lec.java.class01;
 
 public class MyTV {
 	// TV 의 상태 -> 변수
-	boolean isPowerOn;   // 전원 On/Off
-	int channel;        // 현재 채널
-	int volumne;        // 현재 볼륨
+	private boolean isPowerOn;   // 전원 On/Off
+	private int channel;        // 현재 채널
+	private int volume;        // 현재 볼륨
 	
 	
 	// TV 의 동작 -> 메소드
 	public void powerOnOff() {
 		// 메소드 호출때 마다 전원 껏다 켰다..  
+		if(isPowerOn) { 
+			isPowerOn = false;
+			System.out.println("TV를 끕니다");
+		} else {
+			isPowerOn = true;
+			System.out.println("TV를 켭니다");
+		}
+	} // end powerOnOff()
+	
+	// 채널 UP
+	public int channelUp() {
+		channel++;
+		System.out.println("현재 채널: " + channel);
+		return channel;
+	}
+	// 채널 down
+	public int channelDown() {
+		channel--;
+		System.out.println("현재 채널: " + channel);
+		return channel;
+	}
+	
+	// 볼륨 up
+	public int volumeUp() {
+		volume++;
+		System.out.println("현재볼륨: " + volume);
+		return volume;
+	}
+	
+	// 볼륨 down
+	public int volumeDown() {
+		volume--;
+		System.out.println("현재볼륨: " + volume);
+		return volume;
+	}
+	
+	public void displayStatus() {
+		System.out.println("TV 현재 상태");
+		System.out.println("----------");
+		System.out.println("전원:" + isPowerOn);
+		System.out.println("채널:" + channel);
+		System.out.println("볼륨:" + volume);
+		System.out.println("----------");
 	}
 	
 }
+
+
+
+
+
+
+
+
+
 
 
 
