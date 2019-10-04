@@ -13,6 +13,35 @@ public class Class04Main {
 	public static void main(String[] args) {
 		System.out.println("this & 메소드 체이닝");
 		
+		Number n1 = new Number();
+		System.out.println("n1.num = " + n1.getNum());
+		
+		n1.add(10);
+		System.out.println("n1.num = " + n1.getNum());
+		n1.add(11);
+		n1.add(30);
+		n1.add(4);
+		System.out.println("n1.num = " + n1.getNum());
+		
+		System.out.println();
+		n1.setNum(100);
+		Number n2 = new Number(50);
+		n1.add(n2);
+		System.out.println("n1.num = " + n1.getNum());
+		n1.add(n2);
+		System.out.println("n1.num = " + n1.getNum());
+		n1.add(n2);
+		System.out.println("n1.num = " + n1.getNum());
+		
+		n1.add(new Number(10));
+		System.out.println("n1.num = " + n1.getNum());
+		
+		System.out.println();
+		n1.setNum(100);
+		n1.add(n2).add(n2).add(n2);
+		System.out.println("n1.num = " + n1.getNum());
+		
+		
 
 	} // end main()
 

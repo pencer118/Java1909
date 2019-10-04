@@ -29,6 +29,15 @@ public class Rectangle {
 		height = 10;
 	}
 	
+	// 생성자 오버로딩 가능.   매개변수 받는 생성자들 정의
+	public Rectangle(double width, double height) {
+		// 클래스 멤버 임을 명시하기 위해 this 키워드 사용
+		// this : 자기자신 인스턴스
+		this.width = width;
+		this.height = height;
+	}
+	
+	
 	// 동작 : 멤버메소드
 	// 둘레 구하기
 	public double calcPerimeter() {
@@ -40,21 +49,7 @@ public class Rectangle {
 		return width * height;
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+} // end class
 
 
 

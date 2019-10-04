@@ -18,6 +18,17 @@ public class Class03Main {
 	public static void main(String[] args) {
 		System.out.println("Getter & Setter");
 		
+		Number n1 = new Number(100);
+		//System.out.println(n1.num);  // not visible
+		// System.out.println(n1.age);  // cannot be resolved
+		
+		n1.setNum(123);
+		System.out.println(n1.getNum());
+		
+		n1.setNum(-500);
+		System.out.println(n1.getNum());
+		
+		
 
 	} // end main()
 } // end class Class03Main
