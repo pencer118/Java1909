@@ -11,6 +11,22 @@ public class Inherit03Main {
 		System.out.println("상속 연습");
 		System.out.println("java.lang.Object");
 		
+		System.out.println();
+		Person p1 = new Person();
+		p1.name = "홍길동";
+		p1.whoAmI();
+		
+		System.out.println();
+		BusinessPerson p2 = new BusinessPerson();
+		p2.name = "허균";
+		p2.company = "(주)재택";
+		p2.whoAmI();
+		p2.showInfo();
+		
+		System.out.println(p2);  //? println 은 Object 의 toString() 의 결과를 출력함
+		System.out.println(p2.toString());
+		
+		
 		
 	} // end main()
 

@@ -23,6 +23,12 @@ public class Inherit02Main {
 	public static void main(String[] args) {
 		System.out.println("상속 (Inheritance)");
 		
+		SmartTV tv2 = new SmartTV();
+		tv2.channel = 100;
+		tv2.ip = "192.222.333.444";
+		tv2.volume = 10;
+		tv2.displayInfo();
+		
 
 	} // end main
 

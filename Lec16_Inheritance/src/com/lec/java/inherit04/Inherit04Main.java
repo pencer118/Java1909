@@ -14,8 +14,19 @@ public class Inherit04Main {
 
 	public static void main(String[] args) {
 		System.out.println("상속과 생성자");
+		Vehicle v1 = new Vehicle();
+		Vehicle v2 = new Vehicle(100);
 		
+		System.out.println();
+		// Car 클래스 인스턴스 생성
+		Car car1 = new Car();
+		Car car2 = new Car(33, 200);
+		System.out.println(car2.speed);  //???
+		
+		System.out.println();
+		HybridCar h1 = new HybridCar();
 
+		
 	} // end main()
 
 } // end class Inherit04Main
