@@ -12,12 +12,30 @@ package com.lec.java.inherit07;
  *  
  * final 메소드 : 더이상 오버라이딩 불가
  * final 클래스 : 더이상 상속 불가 
+ * final 변수 : 더이상 변경 불가(상수)
  */
 public class Inherit07Main {
 
 	public static void main(String[] args) {
 		System.out.println("상속: Method Overriding(재정의)");
 		
+		Person p1 = new Person();
+		p1.setName("abc");
+		p1.showInfo();
+		
+		System.out.println();
+		BusinessPerson p2 = new BusinessPerson();
+		p2.setName("BTS");
+		p2.setCompany("(주)코리아");
+		p2.showInfo();
+		System.out.println();
+		p2.showInfo(111);
+		
+		System.out.println();
+		System.out.println(p1);  //?
+		System.out.println(p1.toString());
+		System.out.println(p2);
+		System.out.println(p2.toString());
 		
 
 	} // end main()

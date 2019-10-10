@@ -103,6 +103,15 @@ public class Method13Main {
 		System.out.println(str11.toUpperCase().equals(str12.toUpperCase()));
 		
 		
+		// String.format()
+		System.out.println();
+		System.out.println("String.format()");
+		String str13 = String.format("%03d %s %.2f", 12, "Hello", 3.141582);
+		String str14 = String.format("|%5s|%-5s|", "abc", "abc");
+		System.out.println(str13);
+		System.out.println(str14);
+		
+		
 	} // end main()
 
 } // end class

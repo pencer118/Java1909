@@ -14,6 +14,51 @@ public class Operator08Main {
 		System.out.println("[1] &(and), |(or), ^(exclusive or), ~(not)");
 		
 		
+		byte n1 = 10;
+		byte n2 = 7;
+		System.out.printf("n1 : %8s\n", Integer.toBinaryString(n1));
+		System.out.printf("n2 : %8s\n", Integer.toBinaryString(n2));
+		
+		int result = n1 & n2;  // bit 단위 연산
+		System.out.println("result : " + result);
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		
+		result = n1 | n2;
+		System.out.println("result : " + result);
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		
+		result = n1 ^ n2;  // xor
+		System.out.println("result : " + result);
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		
+		
+		result = ~n1;  // not
+		System.out.println("result : " + result);
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		
+		System.out.println();
+		System.out.println("비트 이동 (shift) 연산자 : >>, <<");
+		int n3 = 10;
+		result = n3 << 1;
+		System.out.printf("n3 : %8s\n", Integer.toBinaryString(n3));
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		System.out.println("n3(10진) : " + n3);
+		System.out.println("re(10진) : " + result);
+		
+		result = n3 >> 1;
+		System.out.printf("n3 : %8s\n", Integer.toBinaryString(n3));
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		System.out.println("n3(10진) : " + n3);
+		System.out.println("re(10진) : " + result);
+		
+		
+		result = n3 << 3;
+		System.out.printf("n3 : %8s\n", Integer.toBinaryString(n3));
+		System.out.printf("re : %8s\n", Integer.toBinaryString(result));
+		System.out.println("n3(10진) : " + n3);
+		System.out.println("re(10진) : " + result);
+		
+		
 		
 	} // end main()
 
