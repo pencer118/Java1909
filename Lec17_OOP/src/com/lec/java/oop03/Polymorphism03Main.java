@@ -19,6 +19,12 @@ public class Polymorphism03Main {
 		// Vehicle 타입 참조변수 로는 Car 클래스에의 멤버 사용 불가
 		
 		
+		((Car)car2).setOil(50);
+		
+		
+		//((Car)car1).setOil(10);
+		// ClassCastException  발생
+		// setOil() 을 호출하는 과정이 아니라  Car 로 형변환 하는 과정에서 에러 발생
 		
 	} // end main()
 

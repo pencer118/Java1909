@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.lec.java.class01.MyTV"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.lec.java.class02.Rectangle"/>
 <fullyQualifiedTypeName name="com.lec.java.access01.Test01"/>
 <fullyQualifiedTypeName name="com.lec.java.access02.Test02"/>
@@ -18,4 +17,12 @@
 <fullyQualifiedTypeName name="com.lec.java.inherit04.Vehicle"/>
 <fullyQualifiedTypeName name="com.lec.java.inherit04.HybridCar"/>
 <fullyQualifiedTypeName name="com.lec.java.inherit07.BusinessPerson"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.lec.java.oop01.Vehicle"/>
+<fullyQualifiedTypeName name="com.lec.java.oop01.Car"/>
+<fullyQualifiedTypeName name="com.lec.java.oop01.HybridCar"/>
+<fullyQualifiedTypeName name="com.lec.java.oop02.Vehicle"/>
+<fullyQualifiedTypeName name="com.lec.java.oop02.HybridCar"/>
+<fullyQualifiedTypeName name="com.lec.java.oop03.Vehicle"/>
+<fullyQualifiedTypeName name="com.lec.java.oop03.HybridCar"/>
 </qualifiedTypeNameHistroy>

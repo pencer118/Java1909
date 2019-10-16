@@ -22,10 +22,53 @@ public class Abstract01Main {
 	public static void main(String[] args) {
 		System.out.println("추상 클래스(abstract class)");
 		
+		// 추상클래스는 인스턴스 생성 불가!
+		//TestAbstract test1 = new TestAbstract();
+		
+		// TestClass 인스턴스 생성
+		TestClass test2 = new TestClass();
+		test2.testMethod();
+		
+		
+		// 다형성
+		TestAbstract test3 = new TestClass();
+		
 		
 	} // end main()
 
 } // end class Abstract01Main
+
+// 추상 클래스에도 abstract 키워드 명시
+abstract class TestAbstract {
+	int test;
+	
+	public int getTest() { return test; }
+	
+	// 추상메소드
+	// 수식어 리턴타입 메소드이름(매개변수 리스트);
+	// 반.드.시 abstract 라는 키워드를 써줘야 함
+	public abstract int testMethod();
+	
+	// 
+	
+	
+	
+}
+
+// 추상클래스를 상속받아, 그 클래스의 추상메소드를 오버라이딩 하는 것을 --> 구현한다(implement) 한다 라고 함
+class TestClass extends TestAbstract {
+
+	@Override
+	public int testMethod() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
+
+abstract class TestClass2 extends TestAbstract {
+	int number;
+}
 
 
 
