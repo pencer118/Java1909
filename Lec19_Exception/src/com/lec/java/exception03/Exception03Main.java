@@ -17,7 +17,12 @@ public class Exception03Main {
 		int num2 = 0;
 		
 		// TODO : try ~ catch 로 감싸기
-		System.out.println("num1 / num2 = " + (num1 / num2));
+		try {			
+			System.out.println("num1 / num2 = " + (num1 / num2));
+		} catch (ArithmeticException e) {
+			System.out.println(num1 + " 은 " + num2 + " 로 나눌수 없습니다");
+			e.printStackTrace();
+		}
 		
 		
 		
@@ -25,27 +30,39 @@ public class Exception03Main {
 		System.out.println("[2] ArrayIndexOutOfBoundsException");
 
 		// TODO : try ~ catch 로 감싸기
-		int[] numbers = new int[10];
-		numbers[100] = 111;
+		try {			
+			int[] numbers = new int[10];
+			numbers[100] = 111;
+		} catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();;
+		}
 		
 		
 		System.out.println();
 		System.out.println("[4] NullPointerException");
 
 		// TODO : try ~ catch 로 감싸기
-		String str = null;
-		System.out.println("스트링 길이: " + str.length());
+		try {			
+			String str = null;
+			System.out.println("스트링 길이: " + str.length());
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
 
 		
 		System.out.println();
 		System.out.println("[5] ClassCastException");
 
 		// TODO : try ~ catch 로 감싸기
-		Object obj = new int[10];
-		String str2 = (String)obj;
+		try {			
+			Object obj = new int[10];
+			String str2 = (String)obj;
+		} catch (ClassCastException e) {
+			e.printStackTrace();
+		}
 		
 		
-
+		System.out.println("프로그램 종료");
 	} // end main
 
 } // end class Exception03Main

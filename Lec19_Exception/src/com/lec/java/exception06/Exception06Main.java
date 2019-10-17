@@ -14,7 +14,7 @@ package com.lec.java.exception06;
  */
 public class Exception06Main {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args){
 		System.out.println("throws");
 		
 		System.out.println();
@@ -23,7 +23,31 @@ public class Exception06Main {
 		System.out.println("result = " + result);
 		
 		
-		// TODO
+		try {
+			test.divide2(111, 200);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//test.divide2(111, 200);
+		// main() 메소드는 JVM이 호출하는 메소드
+		// 예외가 JVM 까지 넘어가게 되면 아래와 같이 처리한다
+		//   1: getMessage 호출
+		//   2; 전달되는 과정 출력 printStackTrace
+		//   3: 프로그램 종료
+		
+		
+		test.divide3(222, 100);
+		
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  // 2초 delay
 		
 		
 		System.out.println("프로그램 종료...");

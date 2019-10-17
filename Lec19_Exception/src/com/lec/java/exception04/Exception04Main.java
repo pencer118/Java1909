@@ -26,20 +26,34 @@ public class Exception04Main {
 	public static void main(String[] args) {
 		System.out.println("try ~ catch ~ catch ");
 		
-		int num1 = 123, num2 = 0, result = 0;
+		int num1 = 123, num2 = 1, result = 0;
 		String str = null;
 		int[] numbers = new int[10];
 
 		// TODO : try ~ catch ~ catch .. 사용
-		
+		try {			
 			result = num1 / num2;
 			System.out.println("나눈 결과: " + result);
 			
-			int length = str.length();
-			System.out.println("스트링 길이: " + length);
+//			int length = str.length();
+//			System.out.println("스트링 길이: " + length);
+//			
+//			numbers[10] = 11111;
+//			System.out.println("numbers: " + numbers[10]);
 			
-			numbers[10] = 11111;
-			System.out.println("numbers: " + numbers[10]);
+			// ClassCastException 발생
+			Object obj = new int[10];
+			String str2 = (String)obj;				
+			
+		} catch (ArithmeticException e) {
+			System.out.println("산술연산 예외 : " + e.getMessage());
+		} catch (NullPointerException e) {
+			System.out.println("NPE : " + e.getMessage());
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("배열 인덱스 예외 : " + e.getMessage());
+		} catch (Exception e) {
+			System.out.println("Exception: " + e.getMessage());
+		}
 			
 		
 		System.out.println();

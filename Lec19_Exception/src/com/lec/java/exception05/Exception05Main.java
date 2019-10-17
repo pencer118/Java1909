@@ -38,10 +38,16 @@ public class Exception05Main {
 		
 		
 		// TODO : multi-catch 사용하기
-		
-		String str = null;
-		str.length();
-		int n = 123 / 0;
+		try {			
+			String str = null;
+			//str.length();
+			int n = 123 / 0;
+		} catch (ArithmeticException 
+				| NullPointerException
+				| ArrayIndexOutOfBoundsException e) {
+			System.out.println(e.getClass());
+			System.out.println(e.getMessage());
+		}
 		
 		
 		System.out.println();
@@ -58,8 +64,17 @@ public class Exception05Main {
 		// finally 블록 안의 코드들이 다 실행된 이후에
 		// return이 실행되게 됨.
 		
-
-		// TODO : finally
+		try {
+			int [] numbers = new int[10];
+			numbers[10] = 123;
+			System.out.println("#1 : try 종료");
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("#2 예외 메세지:" + e.getMessage());
+			return;
+		} finally {
+			System.out.println("#3 언제 실행될까요?");
+		}
+		
 		
 		
 		
@@ -72,19 +87,19 @@ public class Exception05Main {
 		// 보통은 자원반납과 같은 것들을 할때 finally 활용
 		// 자원 : 키보드, 파일, 데이터베이스, 네트워크 ...
 
-//		Scanner sc = new Scanner(System.in);
-//
-//		try {
-//			System.out.println("정수 입력하세요");
-//			sc.nextInt();
-//			System.out.println("try블록 종료");
-//		}catch(InputMismatchException ex) {
-//			System.out.println("예외 메시지: " + ex.getMessage());
-//			return;  // 설사 리턴하더라도
-//		}finally {
-//			System.out.println("finally 수행");
-//			sc.close();  // 자원 반납하는 부분은 반드시 finally{} 에서 처리
-//		}
+
+		Scanner sc = new Scanner(System.in);
+		try {
+			System.out.println("정수 입력하세요");
+			sc.nextInt();
+			System.out.println("try블록 종료");
+		}catch(InputMismatchException ex) {
+			System.out.println("예외 메시지: " + ex.getMessage());
+			return;  // 설사 리턴하더라도
+		}finally {
+			System.out.println("finally 수행");
+			sc.close();  // 자원 반납하는 부분은 반드시 finally{} 에서 처리
+		}
 		
 		System.out.println();
 		System.out.println("프로그램 종료...");

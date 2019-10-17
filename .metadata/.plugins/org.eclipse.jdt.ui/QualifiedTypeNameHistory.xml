@@ -25,4 +25,9 @@
 <fullyQualifiedTypeName name="com.lec.java.oop02.HybridCar"/>
 <fullyQualifiedTypeName name="com.lec.java.oop03.Vehicle"/>
 <fullyQualifiedTypeName name="com.lec.java.oop03.HybridCar"/>
+<fullyQualifiedTypeName name="com.lec.java.oop04.TestAbstract"/>
+<fullyQualifiedTypeName name="com.lec.java.oop05.TestInterface"/>
+<fullyQualifiedTypeName name="com.lec.java.oop05.TestInterface2"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 </qualifiedTypeNameHistroy>
