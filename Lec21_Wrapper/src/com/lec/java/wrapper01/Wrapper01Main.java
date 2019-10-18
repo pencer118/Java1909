@@ -54,15 +54,20 @@ public class Wrapper01Main {
 		
 		
 		// 4. literal 상수로 생성
-		// TODO
+		System.out.println();
+		Integer num5 = 123;
+		// Integer.valueOf(123) 과 동일한 코드가 작동. (auto-boxing)
 		
 		
 		// 5. valueOf(문자열) 가능!
-		// TODO
+		System.out.println();
+		Integer num6 = Integer.valueOf("123");
+		System.out.println("num6 : " + num6);
 		
 		
 		// 6. 산술 연산 가능
-		// TODO
+		num6 *= 2;
+		System.out.println("num6 : " + num6);
 
 		
 	} // end main()
