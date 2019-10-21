@@ -33,4 +33,8 @@
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="com.lec.java.wrapper05.Wrapper05Main"/>
+<fullyQualifiedTypeName name="com.lec.java.collection01.BananaBox"/>
+<fullyQualifiedTypeName name="com.lec.java.collection01.OrangeBox"/>
+<fullyQualifiedTypeName name="com.lec.java.collection01.FruitBox"/>
 </qualifiedTypeNameHistroy>

@@ -1,5 +1,7 @@
 package com.lec.java.collection07;
 
+import java.util.LinkedList;
+
 /* LinkedList
 
 	Collection<E>
@@ -27,10 +29,13 @@ public class Collection07Main {
 		System.out.println("Linked List");
 		
 		// Integer 타입을 저장할 수 있는 LinkedList 인스턴스 생성
-		// TODO
+		LinkedList<String> list = new LinkedList<String>();
 		
 		// LinkedList에 데이터 저장: add()
-		// TODO
+		list.add("Java");
+		list.add("Python");
+		list.add("C#");
+		list.add("C++");
 		
 		System.out.println();
 		

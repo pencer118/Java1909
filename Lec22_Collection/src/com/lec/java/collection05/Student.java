@@ -3,7 +3,7 @@ package com.lec.java.collection05;
 public class Student {
 	private int id;
 	private String name;
-	private Score score;
+	private Score score;  // has-a 
 	
 	public Student() {}
 	public Student(int id, String name, Score s) {
