@@ -16,10 +16,13 @@ public class Collection14Main {
 		System.out.println("TreeMap 클래스");
 		
 		// TreeMap<Integer, String> 타입 인스턴스 생성
-		// TODO
+		TreeMap<Integer, String> tmap = new TreeMap<Integer, String>();
 		
 		// 데이터 저장: put(key, value) 메소드 사용
-		// TODO
+		tmap.put(1, "aaa");
+		tmap.put(4, "qwerty");
+		tmap.put(3, "asdf");
+		tmap.put(2, "zxcv");
 		
 		
 		// values() : value 들로 이루어진 Collection 리턴
@@ -28,16 +31,24 @@ public class Collection14Main {
 		
 		// 데이터 검색: get(key) 메소드를 사용
 		// 1. 키값들로만 이루어진 Set을 만듬
-		// TODO
-		
+		Set<Integer> kset = tmap.keySet();
 		// 2. keySet을 가지고 iterator를 만듬
-		// TODO
-
+		Iterator<Integer> itr = kset.iterator();
+		while(itr.hasNext()) {
+			int key = itr.next();
+			System.out.println(key + ":" + tmap.get(key));
+		}
 		System.out.println();
 		
 		
-		// TreeMap에만 있는 KeySet을 만들어 내는 메소드
-		// TODO
+		// key 역순 출력
+		NavigableSet<Integer> navi = tmap.navigableKeySet();
+		Iterator<Integer> itr2 = navi.descendingIterator();
+		while(itr2.hasNext()) {
+			int key = itr2.next();
+			System.out.println(key + ":" + tmap.get(key));
+		}
+
 		
 		
 		// HashMap --> TreeMap 전환하기

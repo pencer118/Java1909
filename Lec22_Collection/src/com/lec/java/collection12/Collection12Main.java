@@ -19,7 +19,7 @@ public class Collection12Main {
 //		tset.add("jkl");
 		tset.add("AaAa");  //1
 		tset.add("aaAA");  //2
-		tset.add("aAaA");  //3
+		tset.add("aAaA");  //3`
 		tset.add("AAaa");  //4
 		
 		// 오름차순 출력

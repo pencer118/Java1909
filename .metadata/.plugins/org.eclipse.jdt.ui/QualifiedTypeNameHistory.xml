@@ -37,4 +37,5 @@
 <fullyQualifiedTypeName name="com.lec.java.collection01.BananaBox"/>
 <fullyQualifiedTypeName name="com.lec.java.collection01.OrangeBox"/>
 <fullyQualifiedTypeName name="com.lec.java.collection01.FruitBox"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>

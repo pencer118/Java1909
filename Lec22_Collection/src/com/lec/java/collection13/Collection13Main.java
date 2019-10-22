@@ -32,22 +32,27 @@ public class Collection13Main {
 		// HashMap 인스턴스 생성
 		// Key - Integer 타입
 		// Value - String 타입
-		// TODO
+		HashMap<Integer, String> hmap = new HashMap<Integer, String>();
 		
 		// 데이터 저장: put() 메소드 사용
-		// TODO
-		
+		System.out.println("put 결과:" +  hmap.put(1, "신동호"));  // key:1 - value:"신동호"
+		System.out.println("put 결과:" +  hmap.put(2, "강경근"));
+		System.out.println("put 결과:" +  hmap.put(3, "명기범"));
+		System.out.println("put 결과:" +  hmap.put(4, "윤성원"));
+		System.out.println("put 결과:" +  hmap.put(5, "심운보"));
 		// 같은 키 값으로 데이터를 put하게 되면, 기존 값이 수정(replace)이 됨.
+		System.out.println("put 결과:" +  hmap.put(4, "공예원"));		
 		
 		// 저장된 데이터 개수 확인 : size()
-		// TODO
+		System.out.println("데이터 개수: " + hmap.size());
 		
 		System.out.println();
 		
-		
 		// 데이터 읽기
 		// get(key) 사용해서 읽기
-		// TODO
+		System.out.println(hmap.get(1));
+		System.out.println(hmap.get(4));
+		System.out.println(hmap.get(10));  // 없는 key 값은?? null
 
 		
 		// 방법1 HashMap에서 Iterator 사용
@@ -55,16 +60,20 @@ public class Collection13Main {
 		// 저장된 키(key)값드로만 이루어진 Set을 만듬.
 		// 2. 1에서 만들어진 Set에 있는 iterator() 메소드를 사용해서
 		// Iterator를 생성
-
-		// TODO
-		
+		Set<Integer> keySet = hmap.keySet();
+		Iterator<Integer> itr = keySet.iterator();
+		while(itr.hasNext()) {
+			int key = itr.next();
+			System.out.println(key + ":" + hmap.get(key));
+		}
 		
 		System.out.println();
 		
 		// 방법2 : Map.Entry 사용
 		// entrySet() 은 Set<Entry<Integer, String>> 리턴함
-
-		// TODO
+		for(Map.Entry<Integer, String> m : hmap.entrySet()) {
+			System.out.println(m.getKey() + ":" + m.getValue());
+		}
 		
 		
 		System.out.println();
@@ -78,13 +87,31 @@ public class Collection13Main {
 		// 5 : 1개
 		
 		System.out.println("HashMap 응용: 배열에서 발생빈도 구하기");
-		int arr[] = {2, 4, 5, 4, 3, 3, 4};
-		// TODO
+		int arr[] = {2, 4, 5, 4, 3, 3, 4, 1, 1, 3, 2, -5, 100, 200, 300, 100};
+		printFreq(arr);
 		
 
 	} // end main()
 
-	// TODO
+	static void printFreq(int arr[]) {
+		HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
+		
+		// 발생빈도 계산
+		for (int i = 0; i < arr.length; i++) {
+			Integer v = hmap.get(arr[i]);
+			
+			if(v == null) {  // 기존에 해당 key 값이 없었다면
+				hmap.put(arr[i], 1);  // 첫등장 1
+			} else {  // 기존에 해당 key 값이 있었다면
+				hmap.put(arr[i], v + 1);   //  기존 등장횟수에 1 증가
+			}
+		}
+		
+		// 결과출력
+		for(Map.Entry<Integer, Integer> e: hmap.entrySet()) {
+			System.out.println(e.getKey() + " : " + e.getValue() + "개");
+		}
+	}
 	
 } // end class Collection13Main
 
