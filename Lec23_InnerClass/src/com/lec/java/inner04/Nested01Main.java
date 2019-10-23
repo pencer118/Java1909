@@ -1,5 +1,7 @@
 package com.lec.java.inner04;
 
+import com.lec.java.inner04.TestOuter.TestNested;
+
 /*
  Nested Class(중첩 클래스):
     다른 클래스의 내부에서 멤버로 정의된 클래스인데, 
@@ -23,7 +25,14 @@ public class Nested01Main {
 	public static void main(String[] args) {
 		System.out.println("Nested Class(중첩 클래스): static inner class");
 
+		TestOuter.TestNested nest1 = new TestOuter.TestNested();
+		nest1.displayInfo();
 		
+		TestOuter.TestNested nest2 = new TestOuter.TestNested();
+		nest2.displayInfo();
+		
+		// nested class 안의 static 메소드
+		TestOuter.TestNested.println();
 		
 	} // end main()
 

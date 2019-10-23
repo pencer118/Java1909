@@ -17,6 +17,17 @@ public class Lambda02Main {
 	public static void main(String[] args) {
 		System.out.println("익명 클래스, 람다 표현식 연습");
 		
+		Test01 lambda01 = () -> System.out.println("안녕하세요");
+		lambda01.testPrint();
+		
+		Test02 lambda02 = (x) -> System.out.println("num = " + x);
+		lambda02.testPrint(100);
+		
+		Test03 lambda03 = (x, y) -> (x > y) ? x : y ;
+		System.out.println(lambda03.max(400, 401));
+		
+		
+		
 		
 	} // end main()
 

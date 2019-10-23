@@ -11,7 +11,12 @@ public class Anonymous01Main {
 	public static void main(String[] args) {
 		System.out.println("Anonymous Inner Class(익명 내부 클래스)");
 		
-
+		Person p = new Person("김진하");
+		p.createInstance(30).readInfo();
+		
+		p.createInstance(40).readInfo();
+		
+		
 	} // end main()
 
 } // end class Anonymous01Main

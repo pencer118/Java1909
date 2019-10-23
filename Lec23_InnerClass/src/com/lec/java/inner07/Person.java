@@ -10,8 +10,34 @@ public class Person {
 		this.name = name;
 	}
 	
+	public Readable createInstance(int age) {
+		
+		// 익명 내부 클래스 : Anonymous Inner class
+		new Readable() {
+			
+			@Override
+			public void readInfo() {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+		
+		
+		return new Readable() {
+			@Override
+			public void readInfo() {
+				System.out.println("이름: " + name);
+				System.out.println("나이: " + age);			
+			}
+		};
+		
+	}
 	
 } // class Person
+
+interface Readable {
+	public abstract void readInfo();
+}
 
 
 

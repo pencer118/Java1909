@@ -14,18 +14,42 @@ public class Lambda01Main {
 		
 		System.out.println();
 		System.out.println("[1] 인터페이스를 구현하는 클래스");
+		Calculable tc1 = new MyMath();
+		double result = tc1.operate(10, 20);
+		System.out.println("result = " + result);
 				
 		System.out.println();
 		System.out.println("[2] 익명 클래스 사용");
+		Calculable tc2 = new Calculable() {
+			@Override
+			public double operate(double x, double y) {
+				return x + y;
+			}
+		};
+		result = tc2.operate(10, 20);
+		System.out.println("result = " + result);
 		
 		System.out.println();
 		System.out.println("[3] 람다 표현식(lambda expression) 사용");
+		Calculable tc3 = (x, y) -> x + y;
+		result = tc3.operate(10, 20);
+		System.out.println("result = " + result);
+				
 		
 	} // end main()
 
 } // end class Lambda01Main
 
+interface Calculable {
+	public abstract double operate(double x, double y);
+}
 
+class MyMath implements Calculable{
+	@Override
+	public double operate(double x, double y) {
+		return x + y;
+	}
+}
 
 
 
