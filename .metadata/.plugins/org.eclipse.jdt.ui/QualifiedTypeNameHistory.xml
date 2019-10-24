@@ -44,4 +44,11 @@
 <fullyQualifiedTypeName name="com.lec.java.inner01.TestOuter.TestInner"/>
 <fullyQualifiedTypeName name="com.lec.java.inner02.Car.Tire"/>
 <fullyQualifiedTypeName name="com.lec.java.inner03.TestOuter.TestInner"/>
+<fullyQualifiedTypeName name="com.lec.java.inner04.TestOuter.TestNested"/>
+<fullyQualifiedTypeName name="com.lec.java.inner05.TestOuter"/>
+<fullyQualifiedTypeName name="PersonWithAge"/>
+<fullyQualifiedTypeName name="com.lec.java.inner07.Readable"/>
+<fullyQualifiedTypeName name="com.lec.java.inner08.TestMyMath"/>
+<fullyQualifiedTypeName name="com.lec.java.inner08.Calculable"/>
+<fullyQualifiedTypeName name="com.lec.java.lambda01.Calculable"/>
 </qualifiedTypeNameHistroy>
