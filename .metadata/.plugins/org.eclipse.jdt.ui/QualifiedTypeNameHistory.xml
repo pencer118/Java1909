@@ -51,4 +51,9 @@
 <fullyQualifiedTypeName name="com.lec.java.inner08.TestMyMath"/>
 <fullyQualifiedTypeName name="com.lec.java.inner08.Calculable"/>
 <fullyQualifiedTypeName name="com.lec.java.lambda01.Calculable"/>
+<fullyQualifiedTypeName name="com.lec.java.thread02.MyRunnable"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="com.lec.java.thread05.MyThread"/>
+<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 </qualifiedTypeNameHistroy>

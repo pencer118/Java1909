@@ -31,17 +31,72 @@ java.lang.Object
  transient 키워드를 사용
 */
 public class File08Main {
+	
+	public static final String FILEPATH = "temp/member.dat";
 
 	public static void main(String[] args) {
 		System.out.println("Object Filter Stream");
 		
-
-		// TODO
+		try(
+				OutputStream out = new FileOutputStream(FILEPATH);
+				ObjectOutputStream oout = new ObjectOutputStream(out);
+				InputStream in = new FileInputStream(FILEPATH);
+				ObjectInputStream oin = new ObjectInputStream(in); 
+				){
+			// 파일에 저장할 데이터 생성
+			Member m1 = new Member("root", "root1234");
+			oout.writeObject(m1);
+			
+			Member m2 = new Member("guest", "quest");
+			oout.writeObject(m2);
+			
+			oout.writeObject(new Member("admin", "admin123456"));
+			
+			oout.writeObject("Hello");
+			String s;
+			oout.writeObject(new Bbb());
+			
+			// 읽기
+			Member dataRead;
+			
+			// 방법1: 매번 readObject() 호출
+//			dataRead = (Member)oin.readObject();
+//			dataRead.displayInfo();
+//			dataRead = (Member)oin.readObject();
+//			dataRead.displayInfo();
+//			dataRead = (Member)oin.readObject();
+//			dataRead.displayInfo();
+			
+			// 방법2 : 무한루프를 돌리다가 EOFException 으로 종료
+			while(true) {
+				dataRead = (Member) oin.readObject();
+				dataRead.displayInfo();
+			}
+			
+					
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (EOFException e) {
+			System.out.println("파일 끝까지 읽었습니다");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
 		
 		
 	} // end main()
 
 } // end class File08Main
+
+class Bbb{
+	
+}
 
 
 

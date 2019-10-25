@@ -27,7 +27,40 @@ public class File06Main {
 	public static void main(String[] args) {
 		System.out.println("Data Filter Stream");
 		
-		// TODO
+		try(
+				OutputStream out = new FileOutputStream("temp/data.bin");
+				DataOutputStream dout = new DataOutputStream(out);
+				InputStream in = new FileInputStream("temp/data.bin");
+				DataInputStream din = new DataInputStream(in);
+				){
+			dout.writeBoolean(true);  // 1byte
+			dout.writeInt(100);  // 4byte
+			dout.writeDouble(3.14);  // 8byte
+			dout.writeChar('A');  // 2byte
+			
+			// 15byte 파일 생성
+			
+			boolean b = din.readBoolean();
+			System.out.println("boolean : " + b);
+			
+			int num1 = din.readInt();
+			System.out.println("int : " + num1);
+			
+			double num2 = din.readDouble();
+			System.out.println("double : " + num2);
+			
+			char ch = din.readChar();
+			System.out.println("char : " + ch);
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	} // end main()
 

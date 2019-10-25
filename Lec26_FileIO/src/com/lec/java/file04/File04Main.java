@@ -35,7 +35,56 @@ public class File04Main {
 	public static void main(String[] args) {
 		System.out.println("BufferedInputStream, BufferedOutputStream");
 
-		// TODO
+		InputStream in = null;
+		BufferedInputStream bin = null;
+		OutputStream out = null;
+		BufferedOutputStream bout = null;
+		
+		try {
+			in = new FileInputStream("temp/big_text.txt");		
+			bin = new BufferedInputStream(in);
+			out = new FileOutputStream("temp/copy_big_text.txt");
+			bout = new BufferedOutputStream(out);
+			
+			
+			int dataRead;
+			int bytesCopied = 0;
+			
+			long startTime = System.currentTimeMillis();  // 현재시간 ms
+			// 파일 복사
+			while(true) {
+				dataRead = bin.read();
+				if(dataRead == -1) {  // 더 이상 읽을 것이 없으면 -1 리턴
+					break;
+				}
+				
+				bout.write(dataRead);
+				
+				bytesCopied++;
+			} // end while
+			long endTime = System.currentTimeMillis();  // 끝난 시간
+			long elapsedTime = endTime - startTime;  // 경과시간
+			
+			System.out.println("읽고 쓴 바이트: " + bytesCopied);
+			System.out.println("경과시간(ms): " + elapsedTime);
+			
+			// 1,978,086  bytes
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			// 리소스 해제
+			try {
+				if(bout != null) bout.close();
+				if(bin != null) bin.close();
+				// bin 을 close 하면 in 도 같이 close() 됨
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 		
 		
 	} // end main()
