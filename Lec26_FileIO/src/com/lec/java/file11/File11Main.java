@@ -35,9 +35,54 @@ public class File11Main {
 	public static void main(String[] args) {
 		System.out.println("FileReader / FileWriter");
 		
-		// TODO
+		String src = "temp/FileData.txt";
+		String dst = "temp/FileData.txt";
+		
+		try(
+				FileWriter fw = new FileWriter(dst);  // write 모드
+				//FileWriter fw = new FileWriter(dst, true);  // append 모드
+				FileReader fr = new FileReader(src);
+				){
+			
+			// 주로 String 이나 char [] 의 내용 입출력할때 사용
+			String str = "안녕하세요";   // 한글5문자
+			char [] charArr = {'J', 'A', 'V','A'};   // 4문자
+			
+			fw.write(str);   // 저장은 시스템 인코딩 상태에 따라 저장
+							// utf-8 인코딩의 경우 한글한글자는 3byte 씩
+			fw.write(charArr);
+			fw.flush();   // write() 메소드 호출후 flush() 로 출력버퍼의 데이터를 완전히 출력
+			
+			// 읽기
+			char [] buff = new char[100];
+			int charsRead = 0;
+			// 읽어들인 '문자수' 를 리턴
+			charsRead = fr.read(buff);
+			for(int i = 0; i < charsRead; i++) {
+				System.out.print(buff[i]);
+			}
+			System.out.println();
+			System.out.println("읽은 문자 개수: " + charsRead);
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		
 		
 		
 	} // end main()
 } // end class
+
+
+
+
+
+
+
+
+
